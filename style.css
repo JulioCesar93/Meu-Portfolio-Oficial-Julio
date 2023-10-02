@@ -451,6 +451,15 @@ h3{
     z-index: 2;
 }
 
+.contact-info button {
+    position: center;
+    right: 30px;
+    bottom: 30px;
+    margin-top: 30px;
+    background: green;
+    color: var(--color-white);
+    border-radius: 50px;
+}
 
 /* ----- FORMULÁRIO CONTATO - MAIL ----- */
 .form-control{
