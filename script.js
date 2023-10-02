@@ -115,3 +115,33 @@ function scrollActive() {
 }
 
 window.addEventListener('scroll', scrollActive)
+
+/*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('form-control'),
+    contactMessage = document.getElementById('contact-message')
+
+const sendEmail = (e) => {
+    e.preventDefault()
+
+    //serviceID - templateID - #form - publickey
+    emailjs.sendForm('--')
+    .then (() => {
+        // Mostrar mensagem ao enviar **
+        contactMessage.textContent = 'Mensagem enviada com sucesso ✅'
+         
+        // Remover mensagem após 5 segundos
+        setTimeout (() =>{
+            contactMessage.textContent = ''
+        }, 5000)
+
+        // Limpar campos de entrada
+        contactForm.reset()
+
+    }, () => {
+        // Menssagem de erro
+        contactMessage.textContent = 'Mensagem não enviada (service error) ❌'
+    })
+}     
+    
+contactForm.addEventListener('submit', sendEmail)
+
