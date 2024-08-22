@@ -33,7 +33,7 @@ function myMenuFunction(){
 
 /* ----- VARIAÇÃO DE NOMES "SOU O.." ----- */
  let typingEffect = new Typed(".typedText",{
-    strings : ["Desenvolvedor Back-End"],
+    strings : ["Analista de Suporte Ti", "Suporte Técnico"],
     loop : false, //true -> variação
     typeSpeed : 100, 
     backSpeed : 80,
